@@ -1,0 +1,114 @@
+/* start contact */
+.contact .container{
+    display: grid;
+    grid-template-columns: 40% 60%;
+    gap: 4rem;
+    height: 30rem;
+    padding: 4rem;
+    margin: 6.8rem auto;
+    background-color: var(--bg-col2);
+    border-radius: 1rem;
+}
+.contact .container aside{
+    position: relative;
+    bottom: 10rem;
+    background-color: var(--main-col);
+    padding: 3rem;
+    border-radius: 1rem;
+}
+.contact .container aside .image{
+    width: 12rem;
+    margin-bottom: 2rem;
+}
+.contact .container aside h2{
+    margin-bottom: 1rem;
+    text-align: left;
+}
+.contact .container aside p{
+    font-size: 0.8rem;
+    margin-bottom: 2rem;
+}
+.contact .container aside .details li{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+.contact .container aside .social{
+    display: flex;
+    gap: 1rem;
+    margin-top: 3rem;
+}
+.contact .container aside .social a i{
+    background-color: var(--bg-col3);
+    padding: 0.5rem;
+    border-radius: 50%;
+    transition: var(--trans);
+}
+.contact .container aside .social a i:hover{
+    background-color: var(--bg-col);
+}
+.contact .container form{
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    margin-right: 4rem;
+}
+.contact .container form .name{
+    display: flex;
+    gap: 1.2rem;
+}
+.contact .container form .name input{
+    width: 50%;
+}
+.contact .container form input, .contact .container form textarea{
+    color: white;
+    width: 100%;
+    padding: 1rem;
+    background-color: var(--bg-col);
+}
+.contact .container form button{
+    width: max-content;
+    margin-top: 1rem;
+    cursor: pointer;
+}
+/* end contact */
+/* start media queries */
+@media (max-width: 1024px) {
+    .contact{
+        padding-bottom: 0;
+    }
+    .contact .container{
+        gap: 1.5rem;
+        height: auto;
+        padding: 1.5rem;
+        margin-top: 3rem;
+    }
+    .contact .container aside{
+        bottom: 0;
+        width: auto;
+        padding: 1.5rem;
+    }
+    .contact .container form{
+        align-self: center;
+        margin-right: 1.5rem;
+    }
+}
+@media (max-width: 600px) {
+    .contact .container{
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        padding: 0;
+        margin-top: 0;
+    }
+    .contact .container form{
+        margin: 0 1.5rem 3rem;
+    }
+    .contact .container form .name{
+        flex-direction: column;
+    }
+    .contact .container form .name input{
+        width: 100%;
+    }
+}
+/* end media queries */

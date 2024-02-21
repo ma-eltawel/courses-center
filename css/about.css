@@ -1,0 +1,138 @@
+/* start achievements */
+.achievements{
+    margin-top: 3rem;
+}
+.achievements .container{
+    display: grid;
+    grid-template-columns: 40% 60%;
+    gap: 5rem;
+}
+.achievements .container .right > p{
+    margin: 1.6rem 0 2.5rem;
+}
+.achievements .container .right .cards{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+.achievements .container .right .cards .card{
+    background-color: var(--bg-col2);
+    text-align: center;
+    padding: 1.6rem;
+    border-radius: 1rem;
+    transition: var(--trans);
+}
+.achievements .container .right .cards .card:hover{
+    background-color: var(--bg-col3);
+    box-shadow: 0 3rem 3rem rgb(0, 0, 0, 0.4);
+}
+.achievements .container .right .cards .card .icon{
+    display: inline-block;
+    font-size: 2rem;
+    background-color: var(--danger);
+    padding: 0.6rem;
+    margin-bottom: 2rem;
+    border-radius: 1rem;
+}
+.achievements .container .right .cards .card:nth-child(2) .icon{
+    background-color: var(--success);
+}
+.achievements .container .right .cards .card:nth-child(3) .icon{
+    background-color: var(--warning);
+}
+.achievements .container .right .cards .card p{
+    margin-top: 1rem;
+}
+/* end achievements */
+/* start team */
+.team{
+    background-color: var(--bg-col2);
+    box-shadow: inset 0 0 3rem rgb(0, 0, 0, 0.5);
+}
+.team .container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+.team .container .member{
+    position: relative;
+    background-color: var(--bg-col3);
+    padding: 2rem;
+    border: 1px solid transparent;
+    overflow-x: hidden;
+    transition: var(--trans);
+}
+.team .container .member:hover{
+    background-color: transparent;
+    border-color: var(--main-col);
+}
+.team .container .member img{
+    filter: saturate(0);
+}
+.team .container .member:hover img{
+    filter: saturate(1);
+}
+.team .container .member .info *{
+    text-align: center;
+    margin-top: 1.4rem;
+}
+.team .container .member .info p{
+    color: var(--light);
+}
+.team .container .member .social{
+    position: absolute;
+    display: flex;
+    top: 50%;
+    right: -100%;
+    flex-direction: column;
+    background-color: var(--main-col);
+    transform: translateY(-50%);
+    border-radius: 1rem 0 0 1rem;
+    box-shadow: -2rem 0 2rem rgb(0, 0, 0, 0.4);
+    transition: var(--trans);
+}
+.team .container .member:hover .social{
+    right: 0;
+}
+.team .container .member .social a{
+    padding: 1rem;
+}
+/* end team */
+/* start media queries */
+@media (max-width: 1024px) {
+    .achievements{
+        margin-top: 2rem;
+    }
+    .achievements .container{
+        grid-template-columns: 1fr;
+        gap: 4rem;
+    }
+    .achievements .container .left{
+        width: 80%;
+        margin: 0 auto;
+    }
+    .team .container{
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+    }
+    .team .container .member{
+        padding: 1rem;
+    }
+}
+@media (max-width: 600px) {
+    .achievements .container .right .cards{
+        grid-template-columns: 1fr 1fr;
+        gap: 0.8rem;
+    }
+    .team .container{
+        grid-template-columns: 1fr 1fr;
+        gap: 0.8rem;
+    }
+    .team .container .member{
+        padding: 0;
+    }
+    .team .container .member p{
+        margin-bottom: 1.5rem;
+    }
+}
+/* end media queries */
